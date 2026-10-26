@@ -54,8 +54,14 @@ form.addEventListener("submit", async (event) => {
     return;
   }
 
-  // Fallback if the email service endpoint is later disabled.
+  // Fallback: opens the visitor's email app. Replace this address after confirming
+  // the inbox that should receive birthday wishes.
   const recipient = "ronnyjojandu@gmail.com";
+  if (recipient === "YOUR_EMAIL_ADDRESS_HERE") {
+    statusBox.textContent = "The message form is ready, but the receiving email still needs to be configured.";
+    statusBox.classList.add("error");
+    return;
+  }
   const subject = encodeURIComponent("A Birthday Wish for You");
   const body = encodeURIComponent(`From: ${name}\nEmail: ${email || "Not provided"}\n\n${message}`);
   window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
