@@ -1,65 +1,281 @@
+
 :root {
   --rose: #2f74d0;
   --deep: #174a8b;
   --cream: #f4f9ff;
   --ink: #183858;
 }
-* { box-sizing: border-box; }
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0; min-height: 100vh; font-family: Georgia, "Times New Roman", serif;
-  color: var(--ink); background: linear-gradient(135deg, #e8f3ff, #cfe5ff 55%, #f0f7ff);
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: linear-gradient(
+    135deg,
+    #e8f3ff,
+    #cfe5ff 55%,
+    #f0f7ff
+  );
   overflow-x: hidden;
 }
-.page { width: min(760px, 100%); margin: 0 auto; padding: 20px 16px 42px; text-align: center; position: relative; }
+
+.page {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  padding: 20px 16px 42px;
+  text-align: center;
+  position: relative;
+}
+
+/* Photo at the top */
 .top-photo {
-  width: 100%; max-height: 520px; object-fit: cover; object-position: center 35%;
-  display: block; border-radius: 24px; border: 5px solid rgba(255,255,255,.9);
-  box-shadow: 0 14px 36px rgba(143,40,84,.18);
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+  border-radius: 24px;
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 14px 36px rgba(23, 74, 139, 0.18);
 }
-.eyebrow { margin: 25px 0 8px; text-transform: uppercase; letter-spacing: 3px; font: bold 12px Arial,sans-serif; color: var(--rose); }
-h1 { font-size: clamp(32px, 7vw, 54px); line-height: 1.08; margin: 8px 0 12px; color: var(--deep); }
-.subtitle, .form-intro { font-size: 18px; margin: 0 auto 22px; max-width: 540px; line-height: 1.6; }
-.heart-line { color: var(--rose); font-size: 25px; letter-spacing: 9px; margin: 12px 0; }
-.message, .wish-section {
-  background: rgba(255,255,255,.82); border: 1px solid #b8d8ff; border-radius: 22px;
-  padding: 25px 22px; box-shadow: 0 8px 24px rgba(143,40,84,.08);
-  font-size: 18px; line-height: 1.75;
+
+/* Headings */
+.eyebrow {
+  margin: 25px 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font: bold 12px Arial, sans-serif;
+  color: var(--rose);
 }
-.verse { font-style: italic; color: #9c3b65; margin-top: 18px; font-size: 16px; }
-.wish-section { margin-top: 28px; text-align: left; }
-.wish-section h2 { color: var(--deep); text-align: center; font-size: clamp(25px, 5vw, 36px); line-height: 1.2; margin: 8px 0 12px; }
-.wish-section .eyebrow, .form-intro { text-align: center; }
-form { display: grid; gap: 9px; }
-label { font: bold 14px Arial, sans-serif; margin-top: 7px; color: var(--deep); }
-label span { font-weight: normal; color: #8a6b79; }
-input, textarea {
-  width: 100%; padding: 13px 14px; border: 1px solid #a9cafa; border-radius: 12px;
-  background: #fafdff; color: #452333; font: 16px Arial, sans-serif;
+
+h1 {
+  font-size: clamp(32px, 7vw, 54px);
+  line-height: 1.08;
+  margin: 8px 0 12px;
+  color: var(--deep);
 }
-input:focus, textarea:focus { outline: 3px solid #c2dcff; border-color: var(--rose); }
-textarea { resize: vertical; min-height: 120px; }
+
+.subtitle,
+.form-intro {
+  font-size: 18px;
+  margin: 0 auto 22px;
+  max-width: 540px;
+  line-height: 1.6;
+}
+
+.heart-line {
+  color: var(--rose);
+  font-size: 25px;
+  letter-spacing: 9px;
+  margin: 12px 0;
+}
+
+/* Birthday message card */
+.message,
+.wish-section {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid #b8d8ff;
+  border-radius: 22px;
+  padding: 25px 22px;
+  box-shadow: 0 8px 24px rgba(23, 74, 139, 0.08);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.verse {
+  font-style: italic;
+  color: #285f9f;
+  margin-top: 18px;
+  font-size: 16px;
+}
+
+/* Birthday wish form */
+.wish-section {
+  margin-top: 28px;
+  text-align: left;
+}
+
+.wish-section h2 {
+  color: var(--deep);
+  text-align: center;
+  font-size: clamp(25px, 5vw, 36px);
+  line-height: 1.2;
+  margin: 8px 0 12px;
+}
+
+.wish-section .eyebrow,
+.form-intro {
+  text-align: center;
+}
+
+form {
+  display: grid;
+  gap: 9px;
+}
+
+label {
+  font: bold 14px Arial, sans-serif;
+  margin-top: 7px;
+  color: var(--deep);
+}
+
+label span {
+  font-weight: normal;
+  color: #647f9b;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #a9cafa;
+  border-radius: 12px;
+  background: #fafdff;
+  color: #183858;
+  font: 16px Arial, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  outline: 3px solid #c2dcff;
+  border-color: var(--rose);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Send button */
 button {
-  margin-top: 8px; padding: 14px 18px; border: 0; border-radius: 999px;
-  color: white; background: var(--rose); font: bold 16px Arial,sans-serif; cursor: pointer;
-  box-shadow: 0 6px 14px rgba(217,79,131,.22);
+  margin-top: 8px;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 999px;
+  color: white;
+  background: var(--rose);
+  font: bold 16px Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(47, 116, 208, 0.22);
+  transition: background 0.3s ease;
 }
-button:hover { background: var(--deep); }
-button:disabled { opacity: .65; cursor: wait; }
-.form-status { min-height: 1.5em; margin: 5px 0 0; text-align: center; font: 14px Arial,sans-serif; }
-.form-status.error { color: #a3203e; }
-.form-status.success { color: #236b45; }
-.privacy-note { font: 12px Arial,sans-serif; color: #8a6b79; text-align: center; margin: 0; }
-.signature { font-size: 22px; color: var(--deep); margin-top: 22px; }
-footer { margin-top: 25px; color: #a14a70; font: 13px Arial,sans-serif; letter-spacing: 1px; }
-.floating { position: fixed; pointer-events: none; opacity: .48; animation: float 7s ease-in-out infinite; }
-.f1 { top: 10%; left: 4%; font-size: 25px; }
-.f2 { top: 45%; right: 4%; font-size: 28px; animation-delay: 1s; }
-.f3 { bottom: 10%; left: 7%; font-size: 22px; animation-delay: 2s; }
-.f4 { top: 70%; right: 8%; font-size: 20px; animation-delay: 3s; }
-@keyframes float { 0%,100% { transform: translateY(0) rotate(-8deg); } 50% { transform: translateY(-18px) rotate(8deg); } }
+
+button:hover {
+  background: var(--deep);
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+/* Form status messages */
+.form-status {
+  min-height: 1.5em;
+  margin: 5px 0 0;
+  text-align: center;
+  font: 14px Arial, sans-serif;
+}
+
+.form-status.error {
+  color: #a3203e;
+}
+
+.form-status.success {
+  color: #236b45;
+}
+
+.privacy-note {
+  font: 12px Arial, sans-serif;
+  color: #647f9b;
+  text-align: center;
+  margin: 0;
+}
+
+/* Closing message */
+.signature {
+  font-size: 22px;
+  color: var(--deep);
+  margin-top: 22px;
+}
+
+footer {
+  margin-top: 25px;
+  color: #285f9f;
+  font: 13px Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Floating hearts and decorations */
+.floating {
+  position: fixed;
+  pointer-events: none;
+  opacity: 0.48;
+  animation: float 7s ease-in-out infinite;
+}
+
+.f1 {
+  top: 10%;
+  left: 4%;
+  font-size: 25px;
+}
+
+.f2 {
+  top: 45%;
+  right: 4%;
+  font-size: 28px;
+  animation-delay: 1s;
+}
+
+.f3 {
+  bottom: 10%;
+  left: 7%;
+  font-size: 22px;
+  animation-delay: 2s;
+}
+
+.f4 {
+  top: 70%;
+  right: 8%;
+  font-size: 20px;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+
+  50% {
+    transform: translateY(-18px) rotate(8deg);
+  }
+}
+
+/* Mobile phone and tablet layout */
 @media (max-width: 480px) {
-  .page { padding: 12px 12px 30px; }
-  .top-photo { max-height: 430px; border-radius: 18px; }
-  .message, .wish-section { padding: 20px 16px; }
+  .page {
+    padding: 12px 12px 30px;
+  }
+
+  .top-photo {
+    max-height: 430px;
+    border-radius: 18px;
+  }
+
+  .message,
+  .wish-section {
+    padding: 20px 16px;
+  }
 }
-@media (prefers-reduced-motion: reduce) { .floating { animation: none; } }
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .floating {
+    animation: none;
+  }
+}
